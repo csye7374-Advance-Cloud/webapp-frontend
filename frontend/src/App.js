@@ -6,7 +6,8 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state={
-      recipe:null
+      recipe:null,
+      count: 0
     }
   }
 
@@ -15,22 +16,24 @@ class App extends React.Component{
   }
 
   fetchRecipe(id){
+    console.log(id);
     fetch('/v1/allrecipes',{headers: {'Access-Control-Allow-Origin': '*'}})
     .then(response => response.json())
         .then(json => {
           this.setState({
-              recipe:json[id]
+              recipe:json[id],
+              count:id
           })
         }); 
   }
 
   render(){
-    let count=0;
-    var{recipe} = this.state;
+    var{recipe, count} = this.state;
     return (
       <div className="App-Margin">
       {
-              !this.state.recipe ? (<div>Loading...</div>):
+        
+              !this.state.recipe ? (<div><h1 className="HeaderMargin">No More Recipes</h1></div>):
               (         
         <div>
           <div><h1 className="HeaderMargin">Browse Recipes</h1></div>
