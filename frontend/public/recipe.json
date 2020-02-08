@@ -1,20 +1,31 @@
 [
   {
-    "cook_time_in_min": 15,
-    "prep_time_in_min": 15,
-    "title": "Creamy Cajun Chicken Pasta",
-    "cuisine": "Italian",
-    "servings": 2,
-    "ingredients": [
-      "4 ounces linguine pasta",
-      "2 boneless, skinless chicken breast halves, sliced into thin strips",
-      "2 teaspoons Cajun seasoning",
-      "2 tablespoons butter"
-    ],
+    "info": {
+      "recipe_id": "33f0eba7-2550-47ff-917c-73886700a187",
+      "created_ts": "2020-02-08T03:04:02.405Z",
+      "updated_ts": "2020-02-08T03:04:02.405Z",
+      "author_id": "ee71c850-4a1e-11ea-a606-3d57a38d0363",
+      "cook_time_in_min": 30,
+      "prep_time_in_min": 15,
+      "total_time_in_min": 45,
+      "title": "Creamy Cajun Chicken Pasta",
+      "cusine": "Italian",
+      "servings": 2,
+      "ingredients": [
+        "4 ounces linguine pasta",
+        "2 boneless, skinless chicken breast halves, sliced into thin strips",
+        "2 teaspoons Cajun seasoning",
+        "2 tablespoons butter"
+      ]
+    },
     "steps": [
       {
         "position": 1,
-        "items": "some text here"
+        "instruction": "some text here"
+      },
+      {
+        "position": 2,
+        "instruction": "step2"
       }
     ],
     "nutrition_information": {
@@ -26,21 +37,28 @@
     }
   },
   {
-    "cook_time_in_min": 20,
-    "prep_time_in_min": 15,
-    "title": "Creamy",
-    "cuisine": "Italian",
-    "servings": 2,
-    "ingredients": [
-      "4 ounces linguine pasta",
-      "2 boneless, skinless chicken breast halves, sliced into thin strips",
-      "2 teaspoons Cajun seasoning",
-      "2 tablespoons butter"
-    ],
+    "info": {
+      "recipe_id": "2ee508dc-ff9f-4b1f-beba-e65bb9db7b76",
+      "created_ts": "2020-02-08T03:03:09.362Z",
+      "updated_ts": "2020-02-08T03:03:09.362Z",
+      "author_id": "ee71c850-4a1e-11ea-a606-3d57a38d0363",
+      "cook_time_in_min": 15,
+      "prep_time_in_min": 15,
+      "total_time_in_min": 30,
+      "title": "Creamy Cajun Chicken Pasta",
+      "cusine": "Italian",
+      "servings": 2,
+      "ingredients": [
+        "4 ounces linguine pasta",
+        "2 boneless, skinless chicken breast halves, sliced into thin strips",
+        "2 teaspoons Cajun seasoning",
+        "2 tablespoons butter"
+      ]
+    },
     "steps": [
       {
         "position": 1,
-        "items": "some text here"
+        "instruction": "some text here"
       }
     ],
     "nutrition_information": {
