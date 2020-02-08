@@ -15,8 +15,8 @@ class App extends React.Component{
   }
 
   fetchRecipe(id){
-    fetch('./recipe.json')
-        .then(res => res.json())
+    fetch('/v1/allrecipes',{headers: {'Access-Control-Allow-Origin': '*'}})
+    .then(response => response.json())
         .then(json => {
           this.setState({
               recipe:json[id]
@@ -50,13 +50,13 @@ class App extends React.Component{
               </thead>
               <tbody>
                 <tr>
-                  <td>{recipe.cook_time_in_min}</td>
-                  <td>{recipe.prep_time_in_min}</td>
-                  <td>{recipe.title}</td>
-                  <td>{recipe.cuisine}</td>
-                  <td>{recipe.servings}</td>
+                  <td>{recipe.info.cook_time_in_min}</td>
+                  <td>{recipe.info.prep_time_in_min}</td>
+                  <td>{recipe.info.title}</td>
+                  <td>{recipe.info.cusine}</td>
+                  <td>{recipe.info.servings}</td>
                   <td>
-                    <ul>{recipe.ingredients.map(item =>(
+                    <ul>{recipe.info.ingredients.map(item =>(
                       <li key = {item}>
                             {item}
                       </li>
@@ -66,14 +66,13 @@ class App extends React.Component{
                   <td>
                     <ol>{recipe.steps.map(item =>(
                       <li key = {item.position}>
-                        {item.items}
+                        {item.instruction}
                       </li>
                       ))}
                     </ol>
                   </td>
                   <td>
                     <div>Calories: {recipe.nutrition_information.calories}</div>
-                    <div>Cholesterol_in_mg :{recipe.nutrition_information.cholesterol_in_mg}</div>
                     <div>Cholesterol_in_mg :{recipe.nutrition_information.cholesterol_in_mg}</div>
                     <div>Sodium_in_mg :{recipe.nutrition_information.sodium_in_mg}</div>
                     <div>Carbohydrates_in_grams :{recipe.nutrition_information.carbohydrates_in_grams}</div>
