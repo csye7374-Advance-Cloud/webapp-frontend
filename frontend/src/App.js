@@ -17,7 +17,9 @@ class App extends React.Component{
 
   fetchRecipe(id){
     console.log(id);
-    fetch('/v1/allrecipes',{headers: {'Access-Control-Allow-Origin': '*'}})
+    let backendurl= process.env.REACT_APP_BACKENDURL;
+    console.log(backendurl);
+    fetch(backendurl +'/v1/allrecipes',{headers: {'Access-Control-Allow-Origin': '*'}})
     .then(response => response.json())
         .then(json => {
           this.setState({
